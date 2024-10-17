@@ -1,4 +1,7 @@
 #DOCKER EXPENSE PROJECT: Frontend Application code
 FROM nginx
 COPY code /usr/share/nginx/html
-COPY expense.conf /etc/nginx/conf.d/expense.conf
+RUN rm -rf /etc/nginx/nginx.conf
+RUN rm -rf /etc/nginx/conf.d
+COPY nginx.conf /etc/nginx/nginx.conf
+# COPY expense.conf /etc/nginx/conf.d/expense.conf
