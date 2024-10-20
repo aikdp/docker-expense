@@ -8,8 +8,8 @@ services:
   mysql:
     image: kdprasad028/mysql:v1
     container_name: mysql
-volumes:
-  - mysql: /avr/lib/mysql
+    volumes:
+    - mysql: /avr/lib/mysql
 backend: 
   image: kdprasad028/backend:v1
   container_name: backend
