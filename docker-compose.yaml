@@ -10,16 +10,16 @@ services:
     container_name: mysql
     volumes:
     - mysql: /var/lib/mysql
-backend: 
-  image: kdprasad028/backend:v1
-  container_name: backend
-  depends_on:
-    - mysql
-frontend: 
-  image: kdprasad028/frontend:v1
-  container_name: frontend
-  ports:
-    - 80:80  
-  depends_on:
-    - backend
+  backend: 
+    image: kdprasad028/backend:v1
+    container_name: backend
+    depends_on:
+      - mysql
+  frontend: 
+    image: kdprasad028/frontend:v1
+    container_name: frontend
+    ports:
+      - 80:80  
+    depends_on:
+      - backend
     
