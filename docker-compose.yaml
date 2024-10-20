@@ -1,0 +1,25 @@
+#DOCKER COMPOSE
+version: "3"
+networks:
+  expense: 
+volumes:
+  mysql:    #equals to docker volume create mysql
+services:
+  mysql:
+    image: kdprasad028/mysql:v1
+    container_name: mysql
+volumes:
+  - mysql: /avr/lib/mysql
+backend: 
+  image: kdprasad028/backend:v1
+  container_name: backend
+  depends_on:
+    - mysql
+frontend: 
+  image: kdprasad028/frontend:v1
+  container_name: frontend
+  ports:
+    - 80:80  
+  depends_on:
+    - backend
+    
