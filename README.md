@@ -2,15 +2,15 @@
 
 # Docker Best Practices
 # 1. Use Official and Verified Images
-# Official Images: Start with official images from Docker Hub when possible, as they are maintained and updated regularly.
-# Minimal Base Images: Use minimal base images (like alpine) to reduce the attack surface and image size.
+Official Images: Start with official images from Docker Hub when possible, as they are maintained and updated regularly.
+Minimal Base Images: Use minimal base images (like alpine) to reduce the attack surface and image size.
 # 2. Keep Images Small
-# Multi-Stage Builds: Use multi-stage builds to minimize the final image size by only including necessary components.
-# Remove Unnecessary Files: Clean up package lists, cache files, and other unnecessary files to keep the image lean.
+Multi-Stage Builds: Use multi-stage builds to minimize the final image size by only including necessary components.
+Remove Unnecessary Files: Clean up package lists, cache files, and other unnecessary files to keep the image lean.
 # 3. Tag Images Properly
-# Version Tagging: Tag images with version numbers (e.g., myapp:1.0) instead of just using latest to avoid ambiguity and ensure consistency across deployments.
+Version Tagging: Tag images with version numbers (e.g., myapp:1.0) instead of just using latest to avoid ambiguity and ensure consistency across deployments.
 # 4. Manage Secrets Securely
-# Environment Variables: Avoid hardcoding secrets in your Dockerfile or image. Use environment variables or Docker secrets for sensitive information.
+Environment Variables: Avoid hardcoding secrets in your Dockerfile or image. Use environment variables or Docker secrets for sensitive information.
 Docker Secrets: Utilize Docker Swarm or Kubernetes secrets management for secure storage and usage of sensitive data.
 # 5. Use Dockerignore
 .dockerignore File: Include a .dockerignore file to prevent unnecessary files and directories from being added to the build context, speeding up the build process and keeping the image clean.
@@ -33,7 +33,7 @@ Service Discovery: Use Docker's built-in DNS service for container name resoluti
 Log Drivers: Configure appropriate log drivers (json-file, syslog, fluentd, etc.) to manage container logs effectively.
 Centralized Logging: Use centralized logging solutions to aggregate and analyze logs from multiple containers and hosts.
 # 13. Security Best Practices
-# Minimal Privileges: Grant the minimum necessary privileges to your containers.
+Minimal Privileges: Grant the minimum necessary privileges to your containers.
 Regular Updates: Regularly update base images and dependencies to mitigate vulnerabilities.
 # 14. Automated Builds and CI/CD Integration
 CI/CD Pipelines: Integrate Docker builds into your CI/CD pipelines to automate testing, building, and deployment of images.
