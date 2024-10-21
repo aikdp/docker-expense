@@ -25,7 +25,7 @@
     
 
 
-#DOCKER COMPOSE so give coomand to wait or sleep 5
+#DOCKER COMPOSE --> give coomand to wait or sleep 5
 version: "3"
 networks:
   expense: 
