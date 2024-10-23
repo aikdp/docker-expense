@@ -50,4 +50,5 @@ RUN npm install
 USER expense
 EXPOSE 123
 EXPOSE 808
+RUN echo "Hello Checking layers"
 CMD ["node", "index.js"]
