@@ -40,7 +40,7 @@ services:
   backend: 
     image: kdprasad028/backend:v1
     container_name: backend
-    command: sh -c "sleep 5 && node /opt/server/index.js"   #give command so that backend will wait 5 sec and it will create
+    command: sh -c "sleep 10 && node /opt/server/index.js"   #give command so that backend will wait 5 sec and it will create
     depends_on:
       - mysql
   frontend: 
