@@ -48,4 +48,5 @@ COPY package.json .
 COPY *.js .
 RUN npm install
 USER expense
+EXPOSE 123
 CMD ["node", "index.js"]
