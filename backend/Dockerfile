@@ -49,4 +49,5 @@ COPY *.js .
 RUN npm install
 USER expense
 EXPOSE 123
+EXPOSE 808
 CMD ["node", "index.js"]
